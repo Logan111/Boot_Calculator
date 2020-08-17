@@ -13,6 +13,21 @@ Scenario: Add two numbers
 
 Scenario: Add more numbers
 
+   Given I have a Calculator that's on a ON  
+   
+   When I enter first number and
+    I press "+" button
+    And enter next number 
+    And press "+" button
+    And enter next number
+    And press "+" button
+    repeat this till last but one number 
+    And enter the last number
+    And I press "=" button
+    
+   Then I see the "summation" of all the entered numbers
+
+
 Scenario: Result is too large to display (or overrunning the limits)
 
 Scenario: Numbers can be negative
